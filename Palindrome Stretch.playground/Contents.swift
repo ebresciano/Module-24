@@ -4,17 +4,13 @@ import UIKit
 
 var str = "Hello, playground"
 
-var reverse = ""
+
 
 var string = "A Santa dog lived as a devil God at NASA"
 
 func findPalindrome(string: String) -> Bool {
-    for character in string.characters {
-        var letter = "\(character)"
-        reverse = letter + reverse
-    }
-    
-    if string == (string + reverse){
+    var reverse = String(string.characters.reverse())
+        if (reverse == string){
     return true
         
     } else {
@@ -23,5 +19,4 @@ func findPalindrome(string: String) -> Bool {
     
     
 }
-
-    print(string == reverse)
+  print(findPalindrome("A Santa dog lived as a devil God at NASA"))
